@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rest_api_blog/data/model/blog_post.dart';
 import 'package:flutter_rest_api_blog/data/model/post_list_model.dart';
-import 'package:flutter_rest_api_blog/screen/blog_post.dart';
+import 'package:flutter_rest_api_blog/screen/blog_post_detail.dart';
 import 'package:get/get.dart';
 
 class PostListWidget extends StatelessWidget {
@@ -14,7 +15,7 @@ class PostListWidget extends StatelessWidget {
         itemBuilder: (context, index) {
           return InkWell(
             onTap: (){
-              Get.to(BlogPostScreen(id: posts[index].id ?? 1));
+              Get.to(BlogPostScreen(id: posts[index].id ?? 0,title: posts[index].title ?? '',));
             },
             child: Card(
                 child: Padding(

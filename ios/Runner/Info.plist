@@ -6,6 +6,9 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Flutter Rest Api Blog</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>For upload photo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
