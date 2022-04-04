@@ -20,6 +20,7 @@ class PostListController extends GetxController{
        postListState.value = PostListSuccess(postLists);
      })
      .catchError((e){
+       print(e.toString());
        postListState.value = PostListError();
      });
   }
