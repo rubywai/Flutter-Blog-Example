@@ -4,7 +4,6 @@ import 'package:flutter_rest_api_blog/data/api_service/post_api_service.dart';
 import 'package:flutter_rest_api_blog/data/model/post_list_model.dart';
 import 'package:flutter_rest_api_blog/widget/post_list.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:shimmer/shimmer.dart';
 
 class Home extends StatelessWidget {

@@ -28,7 +28,16 @@ class _UploadScreenState extends State<UploadScreen> {
       body: Obx((){
        UploadState uploadState = _uploadController.uploadState.value;
        if(uploadState is UploadLoading){
-         return Center(child: CircularProgressIndicator(),);
+         return Center(child:
+           Column(
+             mainAxisSize: MainAxisSize.min,
+             children: [
+               Text('Uploading ... ${(_uploadController.percentage * 100).toInt()}'),
+               Divider(),
+              CircularProgressIndicator(value : (_uploadController.percentage * 100))
+             ],
+           )
+         ,);
        }
        else if(uploadState is UploadError){
          return Center(child: Text('Something wrong'),);

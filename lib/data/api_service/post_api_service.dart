@@ -20,8 +20,8 @@ class PostApiService{
     }).toList();
 
   }
-  Future<UploadRespose> uploadPost({required String title,required String body,required FormData? photo}) async{
-    var result = await _dio.post('$baseUrl/post?title=$title&body=$body',data: photo);
+  Future<UploadRespose> uploadPost({required String title,required String body,required FormData? photo,required Function(int,int) uploadProgress}) async{
+    var result = await _dio.post('$baseUrl/post?title=$title&body=$body',data: photo,onSendProgress: uploadProgress);
     UploadRespose uploadRespose = UploadRespose.fromJson(result.data);
     return uploadRespose;
   }
