@@ -38,6 +38,7 @@ dependencies:
   get: ^4.6.1
   shimmer: ^2.0.0
   image_picker: ^0.8.4+11
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
