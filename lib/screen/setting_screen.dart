@@ -11,7 +11,7 @@ class Setting extends StatefulWidget {
 }
 
 class _SettingState extends State<Setting> {
-  final ThemeController _themeController = Get.find();
+  final ThemeController _themeController = Get.put(ThemeController());
   final LanguageController _languageController = Get.find();
   @override
   void initState() {
