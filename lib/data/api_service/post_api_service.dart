@@ -3,7 +3,7 @@ import 'package:flutter_rest_api_blog/data/model/post_list_model.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_rest_api_blog/data/model/upload_response.dart';
 class PostApiService{
-  static const baseUrl = 'http://13.213.49.142:5000';
+  static const baseUrl = 'http://44.207.161.4:5000';
   Dio _dio = Dio();
   Future<List<PostListModel>> getAllPost() async{
    var result = await _dio.get('$baseUrl/posts');
